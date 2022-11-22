@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --off-white: #efefef;
+  --red: #f73728;
+  --blue: #283df7;
+  --black: #262626;
+}
+
+* {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 21px;
+  text-decoration: none;
+  color: var(--off-white);
+}
+
+body {
+  background-color: #0b002d;
+  color: var(--off-white);
+}
+.main {
+  display: flex;
+  flex-direction: row;
+}
+.sideNav {
+  width: 20%;
+  height: 100vh;
+}
+.sideNav2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: fixed;
+  width: 20%;
+}
+.glitch {
+  position: relative;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -2px 0 #000;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  text-shadow: -2px 0 #000, 2px 2px #000;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+.taiyo-logo {
+  width: 150px;
+}
+.hero-line-1 {
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+  font-size: 15px;
+  white-space: nowrap;
+}
+.hero-line-2 {
+  font-size: 20px;
+  margin-top: -22px !important;
+  color: var(--red);
+}
+.text-dela-gothic-one {
+  font-family: "Dela Gothic One";
+}
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu {
+  list-style: none;
+}
+.anchor-link {
+  text-decoration: none;
+  color: var(--off-white);
+  font-size: 18px;
+}
+.anchor-link:hover {
+  text-decoration: none;
+  color: var(--red);
+}
+.powered-by {
+  font-size: 10px;
+}
+.sideNav-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.side-nav-pages {
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.sideNav-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.twitter {
+  cursor: pointer;
+}
+
+/* home */
+
+.home {
+  width: 80%;
+  padding: 20px;
+}
+.home-top {
+  display: flex;
+  justify-content: space-between;
+}
+.note-div {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 30rem;
+  padding: 20px;
+}
+.note-text {
+  font-size: 15px;
+  color: var(--red);
+}
+.note-paragraph {
+  font-size: 10px;
+}
+.address-btn {
+  background-color: var(--blue);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 150px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+/*** LeaderBoard Css ***/
+/* .faction-div-first {
+  background: rgba(0, 0, 0, 0.5);
+  width: 18rem;
+  height: 310px;
+  border-radius: 8px;
+  border: 4px solid #283df7;
+  position: relative;
+}
+
+.faction-div-second {
+  background: rgba(0, 0, 0, 0.5);
+  width: 15rem;
+  height: 280px;
+  border-radius: 8px;
+  border: 1px solid #f73728;
+  position: relative;
+}
+
+.top-ranked-factions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leaderBoard-div {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.ranked-faction-4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.first-ranking-faction {
+  height: 80px;
+  background: linear-gradient(140deg, #262626, #283df7, #262626);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+}
+
+.second-ranking-faction {
+  height: 80px;
+  background: linear-gradient(
+    140deg,
+    #0b002d,
+    #0b002d,
+    #f73728,
+    #0b002d,
+    #0b002d
+  );
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.position {
+  color: var(--off-white);
+  opacity: 0.7;
+  text-align: right;
+  position: absolute;
+  right: 20px;
+}
+.italic {
+  font-size: 30px;
+}
+.ranking-img {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.user-img {
+  height: 100px;
+  border: 3px solid var(--off-white);
+  border-radius: 100px;
+  width: 100px;
+}
+.user-name-ranking {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.stats-div {
+  margin-top: 68px;
+
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.stats-text {
+  font-size: 12px;
+}
+.stats-text2 {
+  font-size: 10px;
+  text-align: end;
+}
+.stats-left-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.floor-price {
+  font-size: 20px;
+  opacity: 0.8;
+}
+.floor-price2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: end;
+}
+.top-ranked-text {
+  font-size: 24px;
+  font-weight: bold;
+} */
+
+
